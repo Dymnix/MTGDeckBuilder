@@ -12,7 +12,7 @@ This is a basic deck builder for Magic: The Gathering using the Magic: The Gathe
   
   -Additionally, decklists created using this app are formated to be directly copy/paste into https://www.tcgplayer.com/massentry, allowing the user to quickly buy all the cards from the decklist.
   
-# How To Launch
+## How To Launch
 
 1. Download the "MTG DeckBuilder" folder from this repository.
 2. Open the command prompt and change into the folder "MTG DeckBuilder"
@@ -20,17 +20,17 @@ This is a basic deck builder for Magic: The Gathering using the Magic: The Gathe
 4. Launch the python program ("py mtgdeckbuilder.py")
 5. Open up a broweser (Google Chrome preferred) and go to the following address: "localhost:5000"
 
-# Importing Decklists
+## Importing Decklists
 
 Decklists can be imported into the app by first ensuring that the .txt file containing the decklist is saved in the "MTG Deckbuilder" folder. Type the name of the .txt file without the extenstion (ex. "sampledecklist", not "sampledecklist.txt"). Lastly, click the Import Decklist button. The decklist from the text file will override the current active decklist, so be sure to export the active decklist if you want to save it first!
 
 Please note that decklists have a specific format. Each line contains the quantity of the card in the deck, followeed by the card name (ex. "1 Counterspell"). Any additional text in the .txt file may prevent the full decklist from being loaded correctly.
 
-#Exporting Decklists
+## Exporting Decklists
 
 Decklists can be exported to a .txt file, allowing the user to save progress on building the deck. To export the current decklist, simply type the filename of the .txt file you want to create or override and click "Export Decklist." The decklist will be saved in the "MTG DeckBuilder" folder. 
 
-#Search Filters
+## Search Filters
 
 The main feature of this app is to be able to search for cards to add to your deck. The following search filters can be used to help narrow the results to find the best cards for your deck, although none of them are manditory.
 
@@ -54,7 +54,7 @@ Power - The power listed on creatures
 
 Toughness - The toughness listed on creatures.
 
-#Adding and Removing Cards from the Decklist
+## Adding and Removing Cards from the Decklist
 
 To add or remove a card from the decklist:
 
@@ -63,12 +63,12 @@ To add or remove a card from the decklist:
 3. Click "Add" to add to the decklist, or "remove" to remove it from the decklist.
 4. Click "Return to Deckbuilder" to return to the search screen.
 
-#Functionality with TCGPlayer
+## Functionality with TCGPlayer
 
 The decklist is formatted specifically to be used with TCGPlayer.com in order to purchase physical copies of the cards for your deck. Simply go to tcgplayer.com/massentry and copy/paste the decklist, then click "Add to Cart." 
 
 DISCLAIMER: Some cards may be out of print/out of stock. 
 
-#Credits
+## Credits
 
 MTG DeckBuilder was created by Justin Sanner as his final undergraduate project at Columbus State University under the supervision of Jose Canedo. 
