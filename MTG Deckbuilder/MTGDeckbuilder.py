@@ -204,6 +204,6 @@ def cardpage(card):
     return render_template('card.html', decklist=decklist, results=results, card=card, pagecard=pagecard)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 
 
