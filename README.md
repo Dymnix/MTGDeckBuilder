@@ -1,10 +1,15 @@
 # MTGDeckBuilder
 
 This is a basic deck builder for Magic: The Gathering using the Magic: The Gathering API. It has the following utilities:
+
   -Search for cards based on name, colors, converted mana cost, type, subtype, rarity, set, keywords, power, and toughness.
+  
   -Add and remove searched cards from the decklist.
+  
   -Import an existing decklist.
+  
   -Export the current decklist to a .txt file. 
+  
   -Additionally, decklists created using this app are formated to be directly copy/paste into https://www.tcgplayer.com/massentry, allowing the user to quickly buy all the cards from the decklist.
   
 # How To Launch
