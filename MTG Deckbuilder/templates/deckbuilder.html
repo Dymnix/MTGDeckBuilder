@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MTG Deckbuilder</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='deckbuildstyle.css')}}"/>
+</head>
+<body>
+	<!--header-->
+	<div id="main-header">
+		<h1>MTG Deckbuilder</h1>
+	</div>
+
+	<!--Import/Export-->
+	<div id="container-0"> 
+		<form action="", method="post">
+			<div>
+				<h2>Import/Export Decklist</h2>
+				<p>To import a deck list, type the (.txt) file name here, then click "Import Decklist. Make sure that the file is in the same folder as the MTG DeckBuilder python application.</p>
+				<p>To export a deck list, type the file name for the file you want to create and click "Export Decklist". The file will be saved in the same folder as the MTG Deckbuilder python application.</p>	
+			</div>
+			<div id="fileinput">
+				File Name: <input type="text" name="deckfile"> .txt
+			</div>
+			<div id="import">
+				<input type="submit" name="button" value="Import Decklist">
+			</div>
+			<div id="export">
+				<input type="submit" name="button" value="Export Decklist">
+			</div>
+		</form>
+	</div>
+
+	<!--section to choose search criteria and submit search results-->
+	<div id="container-1">
+		<h2>Card Search:</h2>
+		<div id="queries">
+			<form action="" method="post" >
+				<div id="cardcolors">
+					<p>Colors:
+					<input type="checkbox" name="color1" value = "White"> <label>White</label>
+					<input type="checkbox" name="color2" value = "Blue"> <label>Blue</label>
+					<input type="checkbox" name="color3" value = "Black"> <label>Black</label>
+					<input type="checkbox" name="color4" value = "Red"> <label>Red</label>
+					<input type="checkbox" name="color5" value = "Green"> <label>Green</label></p>	
+				</div>				
+				<div id="cardname">
+					<p>Card Name: <input type="text" name="cardname" size=25></p>
+				</div>
+				<div id="cardcmc">
+					<p>Converted Mana Cost: <input type="number" name="cmc" min=0 max=99></p>
+				</div>
+				<div id="cardtype">
+					<p>Type: <input type="text" name="type"></p>
+				</div>
+				<div id="cardsubtype">
+					<p>Subtype: <input type="text" name="subtype"></p>
+				</div>
+				<div id="cardrarity">
+					<p>Rarity: 
+					<select name="rarity">
+						<option value=""></option>
+						<option value="common">Common</option>
+						<option value="uncommon">Uncommon</option>
+						<option value="rare">Rare</option>
+						<option value="mythic">Mythic Rare</option>
+					</select></p>
+				</div>
+				<div id="cardset">
+					<p>Set Code: <input type="text" name="set"></p>
+				</div>
+				<div id="cardtext">
+					<p>Keywords: <input type="text" name="text"></p>
+				</div>
+				<div id="cardpower">
+					<p>Power: <input type="number" name="power" min=0 max=99></p>
+				</div>
+				<div id="cardtoughness">
+					<p>Toughness: <input type="number" name="toughness" min=0 max=99></p>
+				</div>
+				<div><input type="submit" name="button" value="Search"></div>
+			</form>
+		</div>
+
+		<!--section for results-->
+		<div id="container-3">
+			{% if results %}
+				<h2>Results:</h2>
+				<div id="results">
+					<div class="card">
+						{% for entry in results %}
+							<a href="{{entry.getName()}}"><p><img src={{entry.getImage()}} style="float: left; width: 275px; margin: 10px;"></p></a>
+						{% endfor %}
+					</div>
+				</div>
+				<p style="clear: both;">
+				<h4>If you are having trouble finding your card, try narrowing search results.</h4>
+			{% endif %}		
+		</div>
+	</div>
+
+	<!--sidebar to view current decklist-->
+	<div id="container-2">
+		<aside id="decklist">
+			<h2>Decklist:</h2>
+			{% for entry in decklist%}
+				<p>{{entry.getQuantity() + " " + entry.getName()}}</p>
+			{%endfor%}
+			{% if not decklist %}
+				<p>Your deck is empty.</p><p>Add cards to get started.</p>
+			{% endif %}
+		</aside>
+	</div>		
+
+	<!--space at bottom of page-->
+	<div class="ender"></div>
+</body>
+</html>

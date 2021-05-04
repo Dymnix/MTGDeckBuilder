@@ -1,0 +1,27 @@
+#container-0{
+	display: float;
+}
+
+#cardimage{
+	float:left;
+	width:40%;
+}
+
+#container-1{
+	float: left;
+	width: 40%;
+}
+
+#container-2{
+	float: right;
+	width: 20%;
+	border-style: solid;
+	border-color: black;
+	box-sizing: border-box;
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+
+#decklist{
+	margin-left: 20px
+}

@@ -1,0 +1,107 @@
+#main-header {
+	margin:auto;
+	text-align: center;
+}
+
+#container-0{
+	border-top-style: solid;
+	border-top-color: black;
+	padding-bottom: 20px;
+	padding-top: 10px;
+	box-sizing: border-box;
+	margin:auto;
+	text-align: center;
+}
+
+#import{
+	padding-top: 10px;
+	padding-bottom:10px;
+	padding-right:10px;
+	display:inline-block;
+}
+
+#export{
+	padding-top: 10px;
+	padding-bottom:10px;
+	padding-left:10px;
+	display: inline-block;
+}
+
+#container-1{
+	float: left;
+	width: 80%;
+}
+
+#container-2{
+	float: right;
+	width: 20%;
+	border-style: solid;
+	border-color: black;
+	box-sizing: border-box;
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+
+#queries{
+	font-size: 100%;
+}
+
+#cardname{
+	margin-right:10px;
+	display: inline-block;
+}
+
+#cardcmc{
+	margin-right:10px;
+	display: inline-block;
+}
+
+#cardtype{
+	margin-right:10px;
+	display: inline-block;
+}
+
+#cardsubtype{
+	margin-right:10px;
+	display: inline-block;
+}
+
+#cardrarity{
+	margin-right:10px;
+	display: inline-block;
+}
+
+#cardtext{
+	margin-right:10px;
+	display: inline-block;
+}
+
+#cardset{
+	margin-right:10px;
+	display: inline-block;
+}
+
+#cardpower{
+	margin-right:10px;
+	display: inline-block;
+}
+
+#cardtoughness{
+	margin-right:10px;
+	display: inline-block;
+}
+
+#decklist{
+	margin-left: 20px
+}
+
+#main-footer{
+	margin:auto;
+	text-align: center;
+	padding-left: 400px; 
+	padding-top: 20px;
+}
+
+.ender{
+	padding-bottom: 50px;
+}

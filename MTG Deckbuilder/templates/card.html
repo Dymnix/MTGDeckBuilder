@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MTG Deckbuilder</title>
+	<<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='cardstyle.css')}}"/>
+</head>
+<body>
+	<!--return to previous page-->
+	<a href="/">Back to Deckbulder</a>
+	<br><br><br>
+
+	<!--page contents-->
+	<div id="container-0">
+
+		<!--card image-->
+		<div id="cardimage">
+			<p><img src={{pagecard.getImage()}} width="450px"></p>
+		</div>
+
+		<!--card name and add/remove buttons-->
+		<div id="container-1">
+			<h2>{{pagecard.getName()}}</h2>
+			<form action="" method="post">
+				<p><input type="submit" name="adder" value="Add">
+				<input type="submit" name="adder" value="Remove"></p>
+			</form>		
+		</div>
+
+		<!--sidebar to view current decklist-->
+		<div id="container-2">
+			<aside id="decklist">
+				<h2>Decklist:</h2>
+				{% for entry in decklist%}
+					<p>{{entry.getQuantity() + " " + entry.getName()}}</p>
+				{%endfor%}
+				{% if not decklist %}
+					<p>Your deck is empty.</p><p>Add cards to get started.</p>
+				{% endif %}
+			</aside>
+		</div>		
+	</div>
+</body>
+</html>
