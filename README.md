@@ -1,5 +1,6 @@
 # MTGDeckBuilder
 
+## Introduction
 This is a basic deck builder for Magic: The Gathering using the Magic: The Gathering API. It has the following utilities:
 
   -Search for cards based on name, colors, converted mana cost, type, subtype, rarity, set, card text, power, and toughness.
